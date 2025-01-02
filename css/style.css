@@ -236,18 +236,20 @@ header #m_menu li:nth-child(2) img {
 #q_menu li {
   font-size: 13px;
   display: inline-block;
+  margin-right: 123px;
+  margin-top: 160px;
+}
+#q_menu div {
   width: 100px;
   height: 100px;
   background: #F5F6FA;
   border: 2px solid #EEEFF2;
   border-radius: 27px;
-  margin-right: 123px;
-  margin-top: 160px;
 }
 #q_menu p {
-  padding-top: 50px;
+  padding-top: 26px;
 }
-#q_menu li:hover {
+#q_menu li:hover div {
   background: #ddd;
 }
 #q_menu li:last-child {

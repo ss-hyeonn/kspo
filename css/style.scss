@@ -106,12 +106,13 @@ header #m_menu{float: right;
 
 #q_menu{ 
     ul{ font-size: 0; text-align: center;}
-    li {font-size: 13px; display: inline-block;  width: 100px; height: 100px;
-        background: #F5F6FA; border: 2px solid #EEEFF2; border-radius: 27px; margin-right: 123px; margin-top:160px;
+    li {font-size: 13px; display: inline-block; 
+         margin-right: 123px; margin-top:160px;
     
     }
-    p{padding-top:50px ;}
-    li:hover {background: #ddd;}
+    div{ width: 100px; height: 100px;background: #F5F6FA; border: 2px solid #EEEFF2; border-radius: 27px;}
+    p{padding-top:26px ;}
+    li:hover div{background: #ddd;}
     li:last-child{margin-right: 0;}
     img{vertical-align: middle; margin-top: 22.5px;}
    
