@@ -1,9 +1,14 @@
 @charset "UTF-8";
 /*문자 인코딩 정보 표기*/
+:root {
+  font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+}
+
 .inner {
   width: 100%;
   max-width: 1440px;
   margin: 0 auto;
+  outline: 3px solid #f00;
 }
 
 .font {
@@ -99,7 +104,7 @@ header #main_menu .sub_bg {
   height: 440px;
   position: absolute;
   top: 150px;
-  background: #F39800;
+  background: #00468A;
   z-index: 99;
   opacity: 0;
 }
@@ -128,17 +133,10 @@ header #m_menu li:nth-child(2) {
 header #m_menu li img {
   width: 30px;
 }
-header #m_menu li:nth-child(1) img {
-  width: 24px;
-}
-header #m_menu li:nth-child(2) img {
-  width: 26px;
-}
 
 #main_view {
   height: 710px;
   position: relative;
-  font-family: "pretandard";
   font-size: 13px !important;
 }
 #main_view .swiper .swiper-wrapper img {
@@ -166,11 +164,9 @@ header #m_menu li:nth-child(2) img {
   width: 30px;
 }
 #main_view .swiper-pagination-current {
-  font-family: "pretandard";
   font-size: 15px;
 }
 #main_view .swiper-pagination-total {
-  font-family: "pretandard";
   font-size: 15px;
 }
 #main_view .autoplay-progress {
@@ -201,6 +197,25 @@ header #m_menu li:nth-child(2) img {
   stroke-dashoffset: calc(125.6px * (1 - var(--progress)));
   stroke-dasharray: 125.6;
   transform: rotate(-90deg);
+}
+#main_view h2 {
+  font-size: 53px;
+  font-weight: 500;
+  margin-bottom: 50px;
+  line-height: 60px;
+  text-shadow: 1px 1px 1px #333;
+}
+#main_view p {
+  font-size: 22px;
+  font-weight: 200;
+  line-height: 30px;
+  text-shadow: 1px 1px 1px #333;
+}
+#main_view .view_t {
+  position: absolute;
+  top: 30%;
+  left: 25%;
+  color: #fff;
 }
 
 #main_search {
@@ -234,10 +249,10 @@ header #m_menu li:nth-child(2) img {
   text-align: center;
 }
 #q_menu li {
-  font-size: 13px;
+  font-size: 17px;
   display: inline-block;
-  margin-right: 123px;
-  margin-top: 160px;
+  margin-right: 163px;
+  margin-top: 110px;
 }
 #q_menu div {
   width: 100px;
@@ -250,7 +265,7 @@ header #m_menu li:nth-child(2) img {
   padding-top: 26px;
 }
 #q_menu li:hover div {
-  background: #ddd;
+  background: #FDFDFE;
 }
 #q_menu li:last-child {
   margin-right: 0;
@@ -260,52 +275,57 @@ header #m_menu li:nth-child(2) img {
   margin-top: 22.5px;
 }
 
-#bord1 {
+#bord {
+  margin-top: 145px;
+  height: 440px;
+}
+#bord a:hover {
+  text-decoration: underline;
+}
+#bord #bord1 {
   width: 671px;
   float: left;
-  margin-top: 185px;
-  height: 500px;
 }
-#bord1 h2 {
-  font-size: 20px;
-  padding-bottom: 10px;
+#bord #bord1 h2 {
+  font-size: 25px;
+  padding-bottom: 15px;
+  font-weight: 500;
 }
-#bord1 ul {
-  border-top: 1px solid #000;
+#bord #bord1 ul {
+  border-top: 2px solid #000;
 }
-#bord1 span {
+#bord #bord1 span {
   width: 55px;
   border-radius: 10px;
   background-color: #D9D9D9;
   padding: 3px 15px;
   margin-right: 31px;
 }
-#bord1 .color {
+#bord #bord1 .color {
   background-color: #00468A;
   color: #fff;
 }
-#bord1 li {
+#bord #bord1 li {
   padding-top: 30px;
-  font-size: 13px;
+  font-size: 18px;
 }
-
-#bord2 {
+#bord #bord2 {
   width: 671px;
-  float: left;
-  margin-left: 90px;
-  margin-top: 185px;
-  height: 500px;
+  float: right;
 }
-#bord2 h2 {
-  font-size: 20px;
-  padding-bottom: 10px;
+#bord #bord2 ul {
+  list-style: disc;
+  margin-left: 25px;
 }
-#bord2 ul {
-  border-top: 1px solid #000;
+#bord #bord2 h2 {
+  font-size: 25px;
+  padding-bottom: 15px;
+  font-weight: 500;
+  border-bottom: 2px solid #000;
 }
-#bord2 li {
-  padding: 30px 0 0 30px;
-  font-size: 13px;
+#bord #bord2 li {
+  padding: 30px 0 0 0px;
+  font-size: 18px;
 }
 
 #banner {
@@ -319,19 +339,26 @@ header #m_menu li:nth-child(2) img {
 #banner h2 {
   font-size: 36px;
   font-weight: bold;
-  padding-top: 79px;
+  padding: 79px 0 15px;
   color: #fff;
 }
 #banner span {
-  color: #193675;
+  color: #19234c;
 }
 #banner ul {
   width: 350px;
   margin: 27px 0px 0 243px;
   position: relative;
+  height: 377px;
 }
 #banner li {
-  padding-bottom: 42px;
+  padding-bottom: 35px;
+}
+#banner li:first-child {
+  padding-top: 16px;
+}
+#banner li:last-child {
+  padding-bottom: 0;
 }
 #banner .sport_b:checked ~ .sub {
   display: block;
@@ -351,13 +378,13 @@ header #m_menu li:nth-child(2) img {
   color: #fff;
   border: 2px solid #fff;
   border-radius: 15px;
-  padding: 15px 10px;
+  padding: 10px 10px;
 }
 #banner .sub {
   position: absolute;
-  top: 15px;
-  left: 406px;
-  width: 947px;
+  top: 0px;
+  left: 432px;
+  width: 997px;
   height: 377px;
   background: #fff;
   display: none;
@@ -366,20 +393,21 @@ header #m_menu li:nth-child(2) img {
   position: absolute;
   top: 0;
   right: 0;
-  width: 237px;
-  height: 317px;
+  width: 257px;
+  height: 337px;
   background: #ddd;
-  padding: 30px;
+  padding: 20px;
 }
 #banner h3 {
-  font-size: 19px;
-  font-weight: 400;
-  margin: 0px 0 88px;
+  font-size: 20px;
+  font-weight: 500;
+  margin: 15px 0 88px;
 }
 #banner p {
   font-size: 16px;
   font-weight: 300;
   line-height: 23px;
+  text-align: left;
 }
 #banner .button_g {
   background: #fff;
@@ -413,10 +441,11 @@ header #m_menu li:nth-child(2) img {
   display: block;
   margin: auto;
   height: 354px;
-  width: 1281px;
 }
 #newsroom h2 {
   font-size: 32px;
+  font-weight: 600;
+  margin-bottom: 20px;
 }
 #newsroom ul {
   float: left;
@@ -424,7 +453,7 @@ header #m_menu li:nth-child(2) img {
 #newsroom li {
   float: left;
   width: 290px;
-  margin-right: 40px;
+  margin-right: 93px;
   overflow: hidden;
 }
 #newsroom li:hover img {
@@ -434,12 +463,9 @@ header #m_menu li:nth-child(2) img {
 #newsroom li:last-child {
   margin-right: 0;
 }
-#newsroom h2 {
-  font-size: 32px;
-}
 #newsroom h3 {
   font-weight: bold;
-  font-size: 15px;
+  font-size: 16px;
   margin-bottom: 26px;
   color: #00468A;
 }
@@ -455,36 +481,119 @@ header #m_menu li:nth-child(2) img {
 #sns {
   clear: both;
   margin-top: 236px;
+  position: relative;
+  height: 500px;
+  /*#INSTAGRAM,{}
+  #YOUTUBE{}
+  #BLOG{
+
+  }
+
+  #FACEBOOK{
+    */
 }
 #sns h2 {
   font-size: 32px;
+  font-weight: 600;
 }
-#sns #sns_boxs {
-  float: right;
-  width: 542px;
-  height: 744px;
-  margin-right: 103px;
+#sns h3 {
+  padding: 80px 0 0 20px;
+  font-size: 28px;
+  color: #818181;
+  transition: all 0.4s;
 }
-#sns .sns_box {
+#sns .swiper {
   width: 242px;
   height: 324px;
+  position: absolute;
+  right: 0px;
+  top: 80px;
+}
+#sns .swiper-slide {
+  background-position: center;
+  background-size: cover;
+}
+#sns .swiper-slide img {
+  display: block;
+}
+#sns .swiper-slide {
   background: #F7F7F5;
   border-radius: 16px;
 }
-#sns li {
+#sns .sns_box:hover h3 {
+  color: #000;
+}
+#sns div img {
+  margin: 20px 0 0 20px;
+}
+
+footer {
+  color: #fff;
+}
+footer dl {
+  display: inline-flex;
+  margin: 39px 0 10px;
+}
+footer dl:first-child {
+  margin: 67px 0 10px;
+}
+footer dt {
+  margin-right: 18px;
+  font-weight: 500;
+}
+footer dd::after {
+  content: "|";
+  margin: 0 8px 0;
+}
+footer #foot_1 {
+  background: #4F4F4F;
+}
+footer #foot_1 #copy {
+  padding: 20px;
+}
+footer #foot_1 ul {
+  display: inline-flex;
+  margin-top: 96px;
+  margin-bottom: 36px;
+}
+footer #foot_1 li {
+  margin-right: 15px;
+}
+footer h3 {
+  text-align: center;
+}
+footer h4 {
+  color: #333;
+  font-size: 18px;
   float: left;
+  margin: 10px 50px 0 50px;
 }
-#sns li img {
-  margin: 13px 0 0 10px;
+footer #foot_b {
+  background: #F5F6F8;
+  position: relative;
 }
-#sns #INSTAGRAM {
-  margin-right: 58px;
-  margin-top: 30px;
+footer #foot_b #foot_ {
+  padding-top: 20px;
 }
-#sns #BLOG {
-  margin-right: 58px;
-  margin-top: 50px;
+footer #foot_b #foot_ ul {
+  display: inline-flex;
 }
-#sns #FACEBOOK {
-  margin-top: 20px;
+footer #foot_b #foot_ li {
+  display: inline-flex;
+  margin-right: 50px;
+}
+footer #foot_b #foot_g {
+  position: absolute;
+  top: 0;
+  right: 240px;
+}
+footer #foot_b #foot_g ul {
+  display: inline-flex;
+}
+footer #foot_b #foot_g li {
+  display: inline-flex;
+  margin-left: 15px;
+}
+footer #foot_b #foot_g img {
+  width: 80px;
 }/*# sourceMappingURL=style.css.map */
