@@ -7,8 +7,7 @@
 .inner {
   width: 100%;
   max-width: 1440px;
-  margin: 0 auto;
-  outline: 3px solid #f00;
+  margin: 0 auto; /*outline: 3px solid #f00;*/
 }
 
 .font {
@@ -332,9 +331,11 @@ header #m_menu li img {
   clear: both;
   text-align: center;
   margin-bottom: 200px;
+  position: relative;
   background: url("../img/q_menu_bg3.png") no-repeat;
   height: 630px;
   background-size: cover;
+  /*img{width: 997px; height:377px; background: #fff;}*/
 }
 #banner h2 {
   font-size: 36px;
@@ -389,6 +390,16 @@ header #m_menu li img {
   background: #fff;
   display: none;
 }
+#banner #banner_bg1 {
+  position: absolute;
+  top: 230px;
+  left: -430px;
+}
+#banner .banner_img {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
 #banner .sub_w {
   position: absolute;
   top: 0;
@@ -409,32 +420,27 @@ header #m_menu li img {
   line-height: 23px;
   text-align: left;
 }
-#banner .button_g {
-  background: #fff;
-  width: 39px;
-  height: 40px;
-  position: absolute;
-  top: 280px;
-  right: 142px;
-  border-radius: 16px 0 0 16px;
-}
 #banner .button {
   background: #193675;
-  width: 133px;
+  width: 150px;
   height: 40px;
   position: absolute;
   top: 280px;
   right: 18px;
-  border-radius: 16px 16px 0 0;
+  border-radius: 10px;
   line-height: 40px;
   color: #fff;
   font-size: 16px;
   font-weight: 400;
 }
+#banner .button:hover {
+  background: #fff;
+  color: #000;
+}
 #banner .number {
   position: absolute;
   top: 340px;
-  right: 20px;
+  right: 25px;
 }
 
 #newsroom {
@@ -483,14 +489,6 @@ header #m_menu li img {
   margin-top: 236px;
   position: relative;
   height: 500px;
-  /*#INSTAGRAM,{}
-  #YOUTUBE{}
-  #BLOG{
-
-  }
-
-  #FACEBOOK{
-    */
 }
 #sns h2 {
   font-size: 32px;
@@ -506,25 +504,80 @@ header #m_menu li img {
   width: 242px;
   height: 324px;
   position: absolute;
-  right: 0px;
+  right: 230px;
   top: 80px;
 }
-#sns .swiper-slide {
+#sns .sns_box {
   background-position: center;
   background-size: cover;
 }
-#sns .swiper-slide img {
+#sns .sns_box img {
   display: block;
 }
-#sns .swiper-slide {
+#sns .sns_box {
   background: #F7F7F5;
   border-radius: 16px;
 }
 #sns .sns_box:hover h3 {
   color: #000;
 }
-#sns div img {
+#sns .sns_logo {
   margin: 20px 0 0 20px;
+}
+#sns .sns_swiper {
+  width: 600px;
+  height: 324px;
+  position: absolute;
+  left: 10%;
+  top: 80px;
+  overflow: hidden;
+}
+#sns .sns_img {
+  position: relative;
+}
+#sns .sns_origin {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+#sns .sns_origin h3 {
+  background: #ccc;
+  font-size: 13px;
+}
+#sns .sns_hover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 10%;
+  opacity: 0;
+  transition: all 0.3s;
+}
+#sns .sns_grid {
+  display: flex;
+  justify-content: center;
+}
+#sns .sns_grid ul {
+  width: 82%;
+  display: flex;
+  justify-content: center; /* 가운데 정렬 */
+  flex-wrap: wrap;
+}
+#sns .sns_grid li {
+  width: 33%;
+  border: 1px solid #fff;
+  box-sizing: border-box;
+}
+#sns .sns_grid img {
+  display: block;
+  width: 100%;
+}
+#sns .sns_grid li:hover .sns_hover {
+  opacity: 1;
+}
+#sns #youtube {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 footer {
@@ -570,6 +623,7 @@ footer h4 {
 }
 footer #foot_b {
   background: #F5F6F8;
+  height: 80px;
   position: relative;
 }
 footer #foot_b #foot_ {

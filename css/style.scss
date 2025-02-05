@@ -1,7 +1,7 @@
 @charset "utf-8"; /*문자 인코딩 정보 표기*/
 
 :root{font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;}
-.inner{width: 100%; max-width:1440px; margin: 0 auto; outline: 3px solid #f00;}
+.inner{width: 100%; max-width:1440px; margin: 0 auto; /*outline: 3px solid #f00;*/}
 .font{font-family: "pretandard";}
 a{text-decoration: none; color: #000;}
 
@@ -143,7 +143,7 @@ header #m_menu{float: right;
 
     }
 }
-#banner{clear: both;  text-align: center; margin-bottom: 200px;
+#banner{clear: both;  text-align: center; margin-bottom: 200px; position: relative;
     background: url("../img/q_menu_bg3.png") no-repeat; height: 630px; background-size:cover;
     h2{font-size: 36px; font-weight: bold; padding: 79px 0 15px; color: #fff;}
     span{color:#19234c;}
@@ -151,6 +151,7 @@ header #m_menu{float: right;
     li{padding-bottom: 35px;}
     li:first-child{padding-top: 16px;}
     li:last-child{padding-bottom: 0;}
+    
    
    .sport_b:checked ~.sub{
         display: block; 
@@ -166,12 +167,16 @@ header #m_menu{float: right;
         padding: 10px 10px ; 
       }
     .sub{position: absolute; top: 0px;left: 432px; width: 997px; height:377px; background: #fff; display: none;  }
+    /*img{width: 997px; height:377px; background: #fff;}*/
+    #banner_bg1{position: absolute; top: 230px; left: -430px;}
+    .banner_img{position: absolute; top: 0; left: 0; }
     .sub_w{position: absolute; top: 0;right: 0; width: 257px; height: 337px; background: #ddd; padding: 20px;  }
     h3{font-size: 20px; font-weight: 500; margin: 15px 0 88px;}
     p{font-size: 16px; font-weight: 300; line-height: 23px; text-align: left;}
-    .button_g{background: #fff; width: 39px; height: 40px; position: absolute; top: 280px;right:142px; border-radius: 16px 0 0 16px;}
-    .button{background: #193675; width: 133px; height: 40px; position: absolute; top: 280px;right:18px ;border-radius: 16px 16px 0 0; line-height: 40px; color: #fff;font-size: 16px; font-weight: 400;}
-    .number{position: absolute;top: 340px; right: 20px;}
+    
+    .button{background: #193675; width: 150px; height: 40px; position: absolute; top: 280px;right:18px ;border-radius: 10px; line-height: 40px; color: #fff;font-size: 16px; font-weight: 400;}
+    .button:hover{background: #fff; color: #000;}
+    .number{position: absolute;top: 340px; right: 25px;}
 }
 #newsroom{display: block; margin: auto; height: 354px;
     h2{font-size: 32px; font-weight: 600; margin-bottom: 20px;}
@@ -188,42 +193,87 @@ header #m_menu{float: right;
 #sns{clear: both; margin-top: 236px; position: relative; height:500px;
     h2{font-size: 32px; font-weight: 600;}
     h3{padding:80px 0 0 20px; font-size: 28px; color: #818181; transition: all .4s;}
-    .swiper {
+
+    .swiper{
         width: 242px;
         height: 324px;
         position: absolute;
-        right: 0px;
+        right: 230px;
         top: 80px;
        
        
       }
   
-      .swiper-slide {
+      .sns_box {
         background-position: center;
         background-size: cover;
       }
   
-      .swiper-slide img {
-        display: block;
-        
-      }
-   
-    .swiper-slide{ background: #F7F7F5; border-radius: 16px; }
-   .sns_box:hover h3{color: #000; }
+    .sns_box img {
+        display: block;}
+       
+    .sns_box{ background: #F7F7F5; border-radius: 16px; }
+    .sns_box:hover h3{color: #000; }
     
-    div img{margin: 20px 0 0 20px;}
-    /*#INSTAGRAM,{}
-    #YOUTUBE{}
-    #BLOG{
+    .sns_logo{margin: 20px 0 0 20px;}
 
+    .sns_swiper{
+        width: 600px;
+        height: 324px;
+        position: absolute;
+        left: 10%;
+        top: 80px;
+     
+        overflow: hidden;
     }
-    
-    #FACEBOOK{
-      */  
+   .sns_img{position: relative; }
+   .sns_origin{position: absolute; top: 0; left: 0;
+            h3{background: #ccc; font-size: 13px;}
+
+                }
+
+   .sns_hover{position: absolute; top: 0; left: 0; width: 10%; opacity: 0; transition: all .3s;}
+   
+
+
+
+    .sns_grid{  display: flex;
+        justify-content: center;
+       
+        ul{width: 82%;
+            display: flex;
+            justify-content: center; /* 가운데 정렬 */
+            flex-wrap: wrap;
+           
+          }
+          
+         li {width: 33%;border:1px solid #fff; box-sizing: border-box; }
+
+        img {
+            display: block;
+            width: 100%;
+           
+          }  
+       
+        li:hover .sns_hover{opacity: 1;}  
+        
+    }
+    #youtube{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+
+}
+        
+      
+   
+   
 
     
     
-}
+
 footer{color: #fff;
      dl{display: inline-flex; 
         margin:39px 0 10px;
@@ -245,7 +295,7 @@ footer{color: #fff;
     h4{color: #333; font-size: 18px; float: left; margin: 10px 50px 0 50px;}
     
 
-    #foot_b{background: #F5F6F8; position: relative;
+    #foot_b{background: #F5F6F8; height: 80px; position: relative; 
         #foot_{padding-top: 20px;
              ul{display: inline-flex; }
              li{display: inline-flex; margin-right: 50px;}
