@@ -1,0 +1,54 @@
+h<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hover and Click</title>
+    <style>
+        .container {
+            position: relative;
+            display: inline-block;
+        }
+
+        .hidden-box {
+            display: none; /* 기본적으로 숨김 */
+            position: absolute;
+            top: 110%;
+            left: 0;
+            background-color: lightblue;
+            padding: 10px;
+            border: 1px solid #ccc;
+        }
+
+        /* Hover 시 보이게 설정 */
+        .container:hover .hidden-box {
+            display: block;
+        }
+
+        /* 클릭 상태를 위해 active 클래스 스타일 */
+        .hidden-box.active {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <button id="toggle-button">Hover or Click me</button>
+        <div class="hidden-box" id="hidden-box">숨겨진 영역입니다!</div>
+    </div>
+    <div class="container">
+        <button id="toggle-button">Hover or Click me</button>
+        <div class="hidden-box" id="hidden-box">숨겨진 영역입니다!</div>
+    </div>
+
+    <script>
+        const button = document.getElementById('toggle-button');
+        const hiddenBox = document.getElementById('hidden-box');
+
+        button.addEventListener('click', (event) => {
+            event.preventDefault(); // 기본 클릭 동작 방지
+            hiddenBox.classList.toggle('active'); // active 클래스를 토글
+        });
+    </script>
+</body>
+</html>

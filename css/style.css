@@ -212,9 +212,25 @@ header #m_menu li img {
 }
 #main_view .view_t {
   position: absolute;
-  top: 30%;
-  left: 25%;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   color: #fff;
+  text-align: center;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* 텍스트 그림자 추가 */
+}
+#main_view .play img:first-child {
+  display: inline-block;
+}
+#main_view .play img:last-child {
+  display: none;
+  margin-left: 5px;
+}
+#main_view .play.pause img:first-child {
+  display: none;
+}
+#main_view .play.pause img:last-child {
+  display: inline-block;
 }
 
 #main_search {
@@ -244,14 +260,26 @@ header #m_menu li img {
 }
 
 #q_menu ul {
-  font-size: 0;
+  display: flex;
+  justify-content: center;
+  gap: 90px;
+  margin-top: 100px;
+}
+#q_menu ul li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
   text-align: center;
 }
-#q_menu li {
-  font-size: 17px;
-  display: inline-block;
-  margin-right: 163px;
-  margin-top: 110px;
+#q_menu ul li div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#q_menu ul li div img {
+  width: 65%;
 }
 #q_menu div {
   width: 100px;
@@ -268,10 +296,6 @@ header #m_menu li img {
 }
 #q_menu li:last-child {
   margin-right: 0;
-}
-#q_menu img {
-  vertical-align: middle;
-  margin-top: 22.5px;
 }
 
 #bord {

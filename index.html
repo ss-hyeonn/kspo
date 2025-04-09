@@ -179,7 +179,7 @@
           <div class="swiper-slide">
             <img src="./img/main_view3_s.png" alt="">
             <div class="view_t">
-              <h2>스포츠로 건강하고 행복한 대한민국을 만듭니다.</h2>
+              <h2>스포츠로 건강하고 <br>행복한 대한민국을 만듭니다.</h2>
               <p>
                 1988 서울올림픽을 개최한 이듬해 탄생한 KSPO는<br>
                 대한민국 체육재정을 책임지는 튼튼한 거목으로 자라났습니다. <br>
@@ -195,8 +195,8 @@
         <div class="next"><img src="./img/next.png" alt=""></div>
         <div class="prev"><img src="./img/prev.png" alt=""></div>
         <div class="pagination"></div>
-        <div class="autoplay-progress">
-          <div><img src="./img/stop.png" alt=""></div>
+        <div class="autoplay-progress play">
+          <div><img src="./img/stop.png" alt=""><img src="./img/play.png" alt=""></div>
           <svg viewBox="0 0 48 48">
             <circle cx="24" cy="24" r="20"></circle>
           </svg>
@@ -232,9 +232,9 @@
             <div><img src="./img/q4.png" alt=""></div>
             <p>국민건강체조</p>
           </a></li>
-        <li><a href="https://www.kspo.or.kr/kspo/main/contents.do?menuNo=200131">
-            <div><img src="./img/q4.png" alt=""></div>
-            <p>국민건강체조</p>
+        <li><a href="https://www.kspo.or.kr/kspo/main/contents.do?menuNo=200018">
+            <div><img src="./img/q2.png" alt=""></div>
+            <p>증명서발급</p>
           </a></li>
 
       </ul>
@@ -586,52 +586,7 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
     <!--스와이퍼 호출 -->
-    <script>
-      const progressCircle = document.querySelector(".autoplay-progress svg");
-      const progressContent = document.querySelector(".autoplay-progress span");
-      var swiper = new Swiper(" #main_view .mySwiper", {
-        spaceBetween: 30,
-        centeredSlides: true,
-        autoplay: {
-          delay: 2500,
-          disableOnInteraction: false
-        },
-        pagination: {
-          el: ".pagination",
-          type: "fraction",
-        },
-        navigation: {
-          nextEl: ".next",
-          prevEl: ".prev"
-        },
-        on: {
-          autoplayTimeLeft(s, time, progress) {
-            progressCircle.style.setProperty("--progress", 1 - progress);
-            progressContent.textContent = `${Math.ceil(time / 1000)}s`;
-          }
-        }
-      });
-      const swiper3 = new Swiper('.sns_swiper', {
-        // Optional parameters
-
-        loop: true,
-      
-      });
-      var swiper2 = new Swiper("#sns .swiper", {
-        effect: "cube",
-        grabCursor: true, loop:true,
-
-      });
-
-      swiper3.controller.control=swiper2;
-      swiper2.controller.control=swiper3;
-      
-
-     
-
-     
-
-    </script>
+    <script src="./js/script.js"></script>
   </main>
 </body>
 
